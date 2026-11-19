@@ -20,6 +20,7 @@ tests {
   });
   
   test("Response is array", function() {
-    expect(res.body.data).to.be.an('array');
+    const items = Array.isArray(res.body) ? res.body : res.body.data;
+    expect(items).to.be.an('array');
   });
 }

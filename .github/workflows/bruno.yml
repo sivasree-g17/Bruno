@@ -31,29 +31,36 @@ jobs:
 
       - name: Verify Mock File
         run: |
-          ls -R
           test -f mocks/stubs_full_website.yml
+          test -f scripts/start-mock-server.js
 
       - name: Start Bruno YAML Mock Server
         run: |
           nohup node scripts/start-mock-server.js > mock.log 2>&1 </dev/null &
-          sleep 5
+          echo $! > mock.pid
+          sleep 3
 
       - name: Verify Mock Server
         run: |
           cat mock.log
-          curl -v http://localhost:4001/brands
+          curl -f http://localhost:4001/brands
 
       - name: Run Bruno Collection
         run: |
-          bru run --env mock --reporter-html results.html
+          mkdir -p reports
+          bru run --env mock --reporter-html reports/results.html
+
+      - name: Stop Mock Server
+        if: always()
+        run: |
+          kill $(cat mock.pid) || true
 
       - name: Upload Test Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: bruno-report
-          path: results.html
+          path: reports/results.html
 
       - name: Upload Mock Server Logs
         if: always()
