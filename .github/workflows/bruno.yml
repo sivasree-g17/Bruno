@@ -36,18 +36,18 @@ jobs:
 
       - name: Start Bruno YAML Mock Server
         run: |
-          nohup node scripts/start-mock-server.js > mock.log 2>&1 </dev/null &
+          mkdir -p reports
+          nohup node scripts/start-mock-server.js > reports/mock.log 2>&1 </dev/null &
           echo $! > mock.pid
           sleep 3
 
       - name: Verify Mock Server
         run: |
-          cat mock.log
+          cat reports/mock.log
           curl -f http://localhost:4001/brands
 
       - name: Run Bruno Collection
         run: |
-          mkdir -p reports
           bru run --env mock --reporter-html reports/results.html
 
       - name: Stop Mock Server
@@ -61,10 +61,3 @@ jobs:
         with:
           name: bruno-report
           path: reports/results.html
-
-      - name: Upload Mock Server Logs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: mock-server-log
-          path: mock.log
