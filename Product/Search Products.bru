@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/products/search
+  url: {{baseUrl}}/products/search?q=hammer
   body: none
   auth: none
 }
@@ -20,6 +20,6 @@ tests {
   });
   
   test("Response is array", function() {
-    expect(res.body).to.be.an('array');
+    expect(res.body.data).to.be.an('array');
   });
 }
