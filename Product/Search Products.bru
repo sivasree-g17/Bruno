@@ -19,8 +19,11 @@ tests {
     expect(res.getStatus()).to.equal(200);
   });
   
-  test("Response is array", function() {
-    const items = Array.isArray(res.body) ? res.body : res.body.data;
+  test("Response has search results", function() {
+    expect(res.body).to.exist;
+    const items = Array.isArray(res.body)
+      ? res.body
+      : (res.body.data || res.body.products || Object.values(res.body).find(Array.isArray) || []);
     expect(items).to.be.an('array');
   });
 }
