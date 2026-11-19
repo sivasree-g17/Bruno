@@ -1,0 +1,35 @@
+meta {
+  name: Register User
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/users/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john.doe@example.com",
+    "password": "password123",
+    "address": "123 Main St",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "postcode": "10001"
+  }
+}
+
+tests {
+  test("Status is 201", function() {
+    expect(res.getStatus()).to.equal(201);
+  });
+  
+  test("User created", function() {
+    expect(res.body.id).to.exist;
+  });
+}

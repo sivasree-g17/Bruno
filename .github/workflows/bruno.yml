@@ -1,0 +1,37 @@
+name: Toolshop API Pipeline
+
+on:
+  push:
+    branches: [ main, bruno-pipeline ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  api-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Bruno CLI and Prism Mock Server
+        run: npm install -g @usebruno/cli @stoplight/prism-cli
+
+      - name: Start Mock Server
+        run: |
+          prism mock openapi.json -p 3000 &
+          sleep 3
+
+      - name: Run Bruno Collection
+        run: bru run --env mock --reporter-html results.html
+
+      - name: Upload Test Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bruno-report
+          path: results.html

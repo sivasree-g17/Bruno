@@ -1,0 +1,36 @@
+meta {
+  name: Create Invoice
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/invoices
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "cart_id": "cart123",
+    "billing_address": "123 Main St",
+    "billing_city": "New York",
+    "billing_state": "NY",
+    "billing_country": "USA",
+    "billing_postcode": "10001"
+  }
+}
+
+tests {
+  test("Status is 201", function() {
+    expect(res.getStatus()).to.equal(201);
+  });
+  
+  test("Invoice created", function() {
+    expect(res.body.invoice_number).to.exist;
+  });
+}

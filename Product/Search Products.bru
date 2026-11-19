@@ -1,0 +1,25 @@
+meta {
+  name: Search Products
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/products/search
+  body: none
+  auth: none
+}
+
+params:query {
+  q: hammer
+}
+
+tests {
+  test("Status is 200", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+  
+  test("Response is array", function() {
+    expect(res.body).to.be.an('array');
+  });
+}
