@@ -16,18 +16,20 @@ auth:bearer {
 
 body:json {
   {
-    "cart_id": "cart123",
+    "cart_id": "01HQZM9VKD8YJXBVZ8QJKQJ0YN",
     "billing_address": "123 Main St",
     "billing_city": "New York",
     "billing_state": "NY",
     "billing_country": "USA",
-    "billing_postcode": "10001"
+    "billing_postcode": "10001",
+    "payment_method": "cash-on-delivery",
+    "payment_details": {}
   }
 }
 
 tests {
-  test("Status is 200", function() {
-    expect(res.getStatus()).to.equal(200);
+  test("Status is 201", function() {
+    expect(res.getStatus()).to.equal(201);
   });
   
   test("Invoice created", function() {
