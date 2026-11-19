@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -23,25 +24,25 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Install Bruno CLI and Prism Mock Server
+      - name: Install Dependencies
         run: |
+          npm install
           npm install -g @usebruno/cli
-          npm install -g @stoplight/prism-cli
 
-      - name: Verify OpenAPI File Exists
+      - name: Verify Mock File
         run: |
-          ls -la
-          test -f openapi.json
+          ls -R
+          test -f mocks/stubs_full_website.yml
 
-      - name: Start Mock Server
+      - name: Start Bruno YAML Mock Server
         run: |
-          prism mock openapi.json -p 4001 > prism.log 2>&1 &
+          node scripts/start-mock-server.js > mock.log 2>&1 &
           sleep 10
 
       - name: Verify Mock Server
         run: |
-          cat prism.log
-          curl -v http://localhost:4001
+          cat mock.log
+          curl -v http://localhost:4001/brands
 
       - name: Run Bruno Collection
         run: |
@@ -54,9 +55,9 @@ jobs:
           name: bruno-report
           path: results.html
 
-      - name: Upload Prism Logs
+      - name: Upload Mock Server Logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: prism-log
-          path: prism.log
+          name: mock-server-log
+          path: mock.log
