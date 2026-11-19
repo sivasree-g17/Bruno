@@ -1,0 +1,6491 @@
+info:
+  name: stubs_full_website
+  type: mock
+
+mock:
+  port: 4001
+  source:
+    type: spec
+    path: C:\Users\SG15872\Downloads\api1.docs.json
+
+routes:
+  - name: Retrieve all brands (200 Successful operation)
+    description: Retrieve all brands
+    request:
+      method: GET
+      url: /brands
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "mock advoco thalassinus",
+              "name": "new brand",
+              "slug": "new-brand"
+            },
+            {
+              "id": "tyrannus",
+              "name": "new 123344brand",
+              "slug": "new-brand"
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all brands (404)
+    description: Retrieve all brands
+    request:
+      method: GET
+      url: /brands
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all brands (405)
+    description: Retrieve all brands
+    request:
+      method: GET
+      url: /brands
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new brand (201 Successful operation)
+    description: Store new brand
+    request:
+      method: POST
+      url: /brands
+    response:
+      status: 201
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "ara excepturi speciosus",
+            "name": "mock new brand",
+            "slug": "mock new-brand"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new brand (404)
+    description: Store new brand
+    request:
+      method: POST
+      url: /brands
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new brand (405)
+    description: Store new brand
+    request:
+      method: POST
+      url: /brands
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new brand (409)
+    description: Store new brand
+    request:
+      method: POST
+      url: /brands
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new brand (422)
+    description: Store new brand
+    request:
+      method: POST
+      url: /brands
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific brand (200 Successful operation)
+    description: Retrieve specific brand
+    request:
+      method: GET
+      url: /brands/:brandId
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "antiquus cura atque",
+            "name": "new brand",
+            "slug": "new-brand"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific brand (404)
+    description: Retrieve specific brand
+    request:
+      method: GET
+      url: /brands/:brandId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific brand (405)
+    description: Retrieve specific brand
+    request:
+      method: GET
+      url: /brands/:brandId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific brand (200)
+    description: Update specific brand
+    request:
+      method: PUT
+      url: /brands/:brandId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific brand (404)
+    description: Update specific brand
+    request:
+      method: PUT
+      url: /brands/:brandId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific brand (405)
+    description: Update specific brand
+    request:
+      method: PUT
+      url: /brands/:brandId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific brand (409)
+    description: Update specific brand
+    request:
+      method: PUT
+      url: /brands/:brandId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific brand (422)
+    description: Update specific brand
+    request:
+      method: PUT
+      url: /brands/:brandId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific brand (200)
+    description: Partially update specific brand
+    request:
+      method: PATCH
+      url: /brands/:brandId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific brand (404)
+    description: Partially update specific brand
+    request:
+      method: PATCH
+      url: /brands/:brandId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific brand (405)
+    description: Partially update specific brand
+    request:
+      method: PATCH
+      url: /brands/:brandId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific brand (409)
+    description: Partially update specific brand
+    request:
+      method: PATCH
+      url: /brands/:brandId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific brand (422)
+    description: Partially update specific brand
+    request:
+      method: PATCH
+      url: /brands/:brandId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific brand (204 Successful operation)
+    description: Admin role is required to delete a specific brand
+    request:
+      method: DELETE
+      url: /brands/:brandId
+    response:
+      status: 204
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific brand (401)
+    description: Admin role is required to delete a specific brand
+    request:
+      method: DELETE
+      url: /brands/:brandId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific brand (404)
+    description: Admin role is required to delete a specific brand
+    request:
+      method: DELETE
+      url: /brands/:brandId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific brand (405)
+    description: Admin role is required to delete a specific brand
+    request:
+      method: DELETE
+      url: /brands/:brandId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific brand (409)
+    description: Admin role is required to delete a specific brand
+    request:
+      method: DELETE
+      url: /brands/:brandId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific brand (422)
+    description: Admin role is required to delete a specific brand
+    request:
+      method: DELETE
+      url: /brands/:brandId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific brands matching the search query (200 Successful operation)
+    description: Search is performed on the `name` column
+    request:
+      method: GET
+      url: /brands/search
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "carpo",
+              "name": "new brand",
+              "slug": "new-brand"
+            },
+            {
+              "id": "campana texo",
+              "name": "new brand",
+              "slug": "new-brand"
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific brands matching the search query (404)
+    description: Search is performed on the `name` column
+    request:
+      method: GET
+      url: /brands/search
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific brands matching the search query (405)
+    description: Search is performed on the `name` column
+    request:
+      method: GET
+      url: /brands/search
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Create a new cart (201 Create cartId)
+    description: Create a new cart
+    request:
+      method: POST
+      url: /carts
+    response:
+      status: 201
+      statusText: Create cartId
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "1234"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Create a new cart (404)
+    description: Create a new cart
+    request:
+      method: POST
+      url: /carts
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Create a new cart (405)
+    description: Create a new cart
+    request:
+      method: POST
+      url: /carts
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Create a new cart (422)
+    description: Create a new cart
+    request:
+      method: POST
+      url: /carts
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Add item to cart (200 Item added)
+    description: Add item to cart
+    request:
+      method: POST
+      url: /carts/:id
+    response:
+      status: 200
+      statusText: Item added
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "result": "item added or updated"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Add item to cart (404)
+    description: Add item to cart
+    request:
+      method: POST
+      url: /carts/:id
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Add item to cart (405)
+    description: Add item to cart
+    request:
+      method: POST
+      url: /carts/:id
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Add item to cart (422)
+    description: Add item to cart
+    request:
+      method: POST
+      url: /carts/:id
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific cart (200 Successful operation)
+    description: Retrieve specific cart
+    request:
+      method: GET
+      url: /carts/:cartId
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "cohibeo copiose"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific cart (404)
+    description: Retrieve specific cart
+    request:
+      method: GET
+      url: /carts/:cartId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific cart (405)
+    description: Retrieve specific cart
+    request:
+      method: GET
+      url: /carts/:cartId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete Cart (204 Successful operation)
+    description: Delete Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId
+    response:
+      status: 204
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete Cart (401)
+    description: Delete Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete Cart (404)
+    description: Delete Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete Cart (405)
+    description: Delete Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete Cart (409)
+    description: Delete Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete Cart (422)
+    description: Delete Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update quantity of item in cart (200)
+    description: Update quantity of item in cart
+    request:
+      method: PUT
+      url: /carts/:cartId/product/quantity
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update quantity of item in cart (404)
+    description: Update quantity of item in cart
+    request:
+      method: PUT
+      url: /carts/:cartId/product/quantity
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update quantity of item in cart (405)
+    description: Update quantity of item in cart
+    request:
+      method: PUT
+      url: /carts/:cartId/product/quantity
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update quantity of item in cart (422)
+    description: Update quantity of item in cart
+    request:
+      method: PUT
+      url: /carts/:cartId/product/quantity
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete product from cart (204 Successful operation)
+    description: Delete a product from Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId/product/:productId
+    response:
+      status: 204
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete product from cart (401)
+    description: Delete a product from Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId/product/:productId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete product from cart (404)
+    description: Delete a product from Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId/product/:productId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete product from cart (405)
+    description: Delete a product from Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId/product/:productId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete product from cart (409)
+    description: Delete a product from Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId/product/:productId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete product from cart (422)
+    description: Delete a product from Cart
+    request:
+      method: DELETE
+      url: /carts/:cartId/product/:productId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all categories (including subcategories) (200 Successful operation)
+    description: Retrieve all categories (including subcategories)
+    request:
+      method: GET
+      url: /categories/tree
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "urbanus",
+              "parent_id": "demum",
+              "name": "new category",
+              "slug": "new-category",
+              "sub_categories": [
+                {
+                  "id": "campana vulpes quos",
+                  "parent_id": "quo campana",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "id": "cunctatio",
+                  "parent_id": "vereor commemoro",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "laborum umbra",
+              "parent_id": "adfero vestigium",
+              "name": "new category",
+              "slug": "new-category",
+              "sub_categories": [
+                {
+                  "id": "aptus",
+                  "parent_id": "cavus cena officia",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                },
+                {
+                  "id": "comedo cervus",
+                  "parent_id": "celer temperantia",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                }
+              ]
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all categories (including subcategories) (404)
+    description: Retrieve all categories (including subcategories)
+    request:
+      method: GET
+      url: /categories/tree
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all categories (including subcategories) (405)
+    description: Retrieve all categories (including subcategories)
+    request:
+      method: GET
+      url: /categories/tree
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all categories (200 Successful operation)
+    description: Retrieve all categories
+    request:
+      method: GET
+      url: /categories
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "deduco cubo vivo",
+              "parent_id": "appono curso",
+              "name": "new category",
+              "slug": "new-category",
+              "sub_categories": [
+                null,
+                null
+              ]
+            },
+            {
+              "id": "culpo arguo traho",
+              "parent_id": "enim cuppedia",
+              "name": "new category",
+              "slug": "new-category",
+              "sub_categories": [
+                null,
+                null
+              ]
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all categories (404)
+    description: Retrieve all categories
+    request:
+      method: GET
+      url: /categories
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all categories (405)
+    description: Retrieve all categories
+    request:
+      method: GET
+      url: /categories
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new category (201 Successful operation)
+    description: Store new category
+    request:
+      method: POST
+      url: /categories
+    response:
+      status: 201
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "atavus",
+            "parent_id": "omnis accusator armarium",
+            "name": "new category",
+            "slug": "new-category",
+            "sub_categories": [
+              null,
+              null
+            ]
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new category (404)
+    description: Store new category
+    request:
+      method: POST
+      url: /categories
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new category (405)
+    description: Store new category
+    request:
+      method: POST
+      url: /categories
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new category (409)
+    description: Store new category
+    request:
+      method: POST
+      url: /categories
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new category (422)
+    description: Store new category
+    request:
+      method: POST
+      url: /categories
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific category (including subcategories) (200 Successful operation)
+    description: Retrieve specific category (including subcategories)
+    request:
+      method: GET
+      url: /categories/tree/:categoryId
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "terra ciminatio",
+            "parent_id": "abduco stella",
+            "name": "new category",
+            "slug": "new-category",
+            "sub_categories": [
+              {
+                "id": "aliquid accedo",
+                "parent_id": "charisma odit vestrum",
+                "name": "new category",
+                "slug": "new-category",
+                "sub_categories": [
+                  null,
+                  null
+                ]
+              },
+              {
+                "id": "solum patrocinor",
+                "parent_id": "contego cohors aegrotatio",
+                "name": "new category",
+                "slug": "new-category",
+                "sub_categories": [
+                  null,
+                  null
+                ]
+              }
+            ]
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific category (including subcategories) (404)
+    description: Retrieve specific category (including subcategories)
+    request:
+      method: GET
+      url: /categories/tree/:categoryId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific category (including subcategories) (405)
+    description: Retrieve specific category (including subcategories)
+    request:
+      method: GET
+      url: /categories/tree/:categoryId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific categories matching the search query (200 Successful operation)
+    description: Search is performed on the `name` column
+    request:
+      method: GET
+      url: /categories/search
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "demo amor enim",
+              "parent_id": "socius",
+              "name": "new category",
+              "slug": "new-category",
+              "sub_categories": [
+                null,
+                null
+              ]
+            },
+            {
+              "id": "verbum tabella",
+              "parent_id": "incidunt absconditus",
+              "name": "new category",
+              "slug": "new-category",
+              "sub_categories": [
+                null,
+                null
+              ]
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific categories matching the search query (404)
+    description: Search is performed on the `name` column
+    request:
+      method: GET
+      url: /categories/search
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific categories matching the search query (405)
+    description: Search is performed on the `name` column
+    request:
+      method: GET
+      url: /categories/search
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific category (200)
+    description: Update specific category
+    request:
+      method: PUT
+      url: /categories/:categoryId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific category (404)
+    description: Update specific category
+    request:
+      method: PUT
+      url: /categories/:categoryId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific category (405)
+    description: Update specific category
+    request:
+      method: PUT
+      url: /categories/:categoryId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific category (409)
+    description: Update specific category
+    request:
+      method: PUT
+      url: /categories/:categoryId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific category (422)
+    description: Update specific category
+    request:
+      method: PUT
+      url: /categories/:categoryId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific category (200)
+    description: Partially update specific category
+    request:
+      method: PATCH
+      url: /categories/:categoryId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific category (404)
+    description: Partially update specific category
+    request:
+      method: PATCH
+      url: /categories/:categoryId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific category (405)
+    description: Partially update specific category
+    request:
+      method: PATCH
+      url: /categories/:categoryId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific category (409)
+    description: Partially update specific category
+    request:
+      method: PATCH
+      url: /categories/:categoryId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific category (422)
+    description: Partially update specific category
+    request:
+      method: PATCH
+      url: /categories/:categoryId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific category (204 Successful operation)
+    description: Admin role is required to delete a specific category
+    request:
+      method: DELETE
+      url: /categories/:categoryId
+    response:
+      status: 204
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific category (401)
+    description: Admin role is required to delete a specific category
+    request:
+      method: DELETE
+      url: /categories/:categoryId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific category (404)
+    description: Admin role is required to delete a specific category
+    request:
+      method: DELETE
+      url: /categories/:categoryId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific category (405)
+    description: Admin role is required to delete a specific category
+    request:
+      method: DELETE
+      url: /categories/:categoryId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific category (409)
+    description: Admin role is required to delete a specific category
+    request:
+      method: DELETE
+      url: /categories/:categoryId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific category (422)
+    description: Admin role is required to delete a specific category
+    request:
+      method: DELETE
+      url: /categories/:categoryId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve messages (200 Successful operation)
+    description: "`admin` retrieves all messages, `user` retrieves only related messages"
+    request:
+      method: GET
+      url: /messages
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "current_page": 1,
+            "data": [
+              {
+                "name": "John Doe",
+                "email": "john@doe.example",
+                "subject": "website",
+                "message": "Something is wrong with the website.",
+                "status": "NEW",
+                "id": "1",
+                "created_at": "2022-08-01 08:24:56"
+              },
+              {
+                "name": "John Doe",
+                "email": "john@doe.example",
+                "subject": "website",
+                "message": "Something is wrong with the website.",
+                "status": "NEW",
+                "id": "1",
+                "created_at": "2022-08-01 08:24:56"
+              }
+            ],
+            "from": 1,
+            "last_page": 1,
+            "per_page": 1,
+            "to": 1,
+            "total": 1
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve messages (401)
+    description: "`admin` retrieves all messages, `user` retrieves only related messages"
+    request:
+      method: GET
+      url: /messages
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve messages (404)
+    description: "`admin` retrieves all messages, `user` retrieves only related messages"
+    request:
+      method: GET
+      url: /messages
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve messages (405)
+    description: "`admin` retrieves all messages, `user` retrieves only related messages"
+    request:
+      method: GET
+      url: /messages
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Send new contact message (200 Result of the insert)
+    description: Send new contact message by mail
+    request:
+      method: POST
+      url: /messages
+    response:
+      status: 200
+      statusText: Result of the insert
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "success": true
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Send new contact message (404)
+    description: Send new contact message by mail
+    request:
+      method: POST
+      url: /messages
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Send new contact message (405)
+    description: Send new contact message by mail
+    request:
+      method: POST
+      url: /messages
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Attach file to contact message (200 Result of the file upload)
+    description: Attach file to contact message
+    request:
+      method: POST
+      url: /messages/:messageId/attach-file
+    response:
+      status: 200
+      statusText: Result of the file upload
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "success": true
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Attach file to contact message (404)
+    description: Attach file to contact message
+    request:
+      method: POST
+      url: /messages/:messageId/attach-file
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Attach file to contact message (405)
+    description: Attach file to contact message
+    request:
+      method: POST
+      url: /messages/:messageId/attach-file
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific message (200 Successful operation)
+    description: Retrieve specific message
+    request:
+      method: GET
+      url: /messages/:messageId
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "name": "John Doe",
+            "email": "john@doe.example",
+            "subject": "website",
+            "message": "Something is wrong with the website.",
+            "status": "NEW",
+            "id": "1",
+            "created_at": "2022-08-01 08:24:56"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific message (401)
+    description: Retrieve specific message
+    request:
+      method: GET
+      url: /messages/:messageId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific message (404)
+    description: Retrieve specific message
+    request:
+      method: GET
+      url: /messages/:messageId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific message (405)
+    description: Retrieve specific message
+    request:
+      method: GET
+      url: /messages/:messageId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Send new contact message (200 Successful operation)
+    description: Send new contact message by mail
+    request:
+      method: POST
+      url: /messages/:messageId/reply
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "message": "Reply message",
+            "id": "1",
+            "created_at": "2022-08-01 08:24:56",
+            "user": {
+              "first_name": "John",
+              "last_name": "Doe",
+              "address": {
+                "street": "Street 1",
+                "house_number": "12",
+                "city": "City",
+                "state": "State",
+                "country": "Country",
+                "postal_code": "1234AA"
+              },
+              "phone": "0987654321",
+              "dob": "1970-01-01",
+              "email": "john@doe.example",
+              "id": "adsidue conicio appositus",
+              "provider": "beatae demens sordeo",
+              "totp_enabled": false,
+              "enabled": false,
+              "failed_login_attempts": 87,
+              "created_at": "2022-08-01 08:24:56"
+            }
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Send new contact message (401)
+    description: Send new contact message by mail
+    request:
+      method: POST
+      url: /messages/:messageId/reply
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Send new contact message (404)
+    description: Send new contact message by mail
+    request:
+      method: POST
+      url: /messages/:messageId/reply
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Send new contact message (405)
+    description: Send new contact message by mail
+    request:
+      method: POST
+      url: /messages/:messageId/reply
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Set a new message status (200)
+    description: "Set a new message status. Possible values: `NEW`, `IN_PROGRESS`, `RESOLVED`"
+    request:
+      method: PUT
+      url: /messages/:messageId/status
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Set a new message status (401)
+    description: "Set a new message status. Possible values: `NEW`, `IN_PROGRESS`, `RESOLVED`"
+    request:
+      method: PUT
+      url: /messages/:messageId/status
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Set a new message status (404)
+    description: "Set a new message status. Possible values: `NEW`, `IN_PROGRESS`, `RESOLVED`"
+    request:
+      method: PUT
+      url: /messages/:messageId/status
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Set a new message status (405)
+    description: "Set a new message status. Possible values: `NEW`, `IN_PROGRESS`, `RESOLVED`"
+    request:
+      method: PUT
+      url: /messages/:messageId/status
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all favorites (200 Successful operation)
+    description: User role is required to retrieve users favorites
+    request:
+      method: GET
+      url: /favorites
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "product_id": "1234",
+              "user_id": "1234",
+              "id": "1234",
+              "product": {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "name": "new brand",
+                "description": "Lorum ipsum",
+                "price": 9.99,
+                "is_location_offer": 1,
+                "is_rental": 0,
+                "in_stock": 0,
+                "co2_rating": "A",
+                "is_eco_friendly": true,
+                "brand": {
+                  "id": "aut avarus",
+                  "name": "new brand",
+                  "slug": "new-brand"
+                },
+                "category": {
+                  "id": "vito bos corona",
+                  "parent_id": "ustilo summisse",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                },
+                "product_image": {
+                  "by_name": "commemoro",
+                  "by_url": "tollo",
+                  "source_name": "blanditiis utrum",
+                  "source_url": "adeptio trucido",
+                  "file_name": "summa atrocitas baiulus",
+                  "title": "arx vergo",
+                  "id": "defetiscor verus"
+                }
+              }
+            },
+            {
+              "product_id": "1234",
+              "user_id": "1234",
+              "id": "1234",
+              "product": {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "name": "new brand",
+                "description": "Lorum ipsum",
+                "price": 9.99,
+                "is_location_offer": 1,
+                "is_rental": 0,
+                "in_stock": 0,
+                "co2_rating": "A",
+                "is_eco_friendly": true,
+                "brand": {
+                  "id": "voluptate occaecati arcesso",
+                  "name": "new brand",
+                  "slug": "new-brand"
+                },
+                "category": {
+                  "id": "totam corroboro",
+                  "parent_id": "repudiandae comitatus",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                },
+                "product_image": {
+                  "by_name": "turbo bellicus",
+                  "by_url": "stillicidium conicio",
+                  "source_name": "cupressus censura",
+                  "source_url": "utor clarus",
+                  "file_name": "audacia conqueror",
+                  "title": "speculum thermae adiuvo",
+                  "id": "esse"
+                }
+              }
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all favorites (401)
+    description: User role is required to retrieve users favorites
+    request:
+      method: GET
+      url: /favorites
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all favorites (404)
+    description: User role is required to retrieve users favorites
+    request:
+      method: GET
+      url: /favorites
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all favorites (405)
+    description: User role is required to retrieve users favorites
+    request:
+      method: GET
+      url: /favorites
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new favorite (200 Successful operation)
+    description: User role is required to store new favorite
+    request:
+      method: POST
+      url: /favorites
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "product_id": "1234",
+            "user_id": "1234",
+            "id": "1234"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new favorite (401)
+    description: User role is required to store new favorite
+    request:
+      method: POST
+      url: /favorites
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new favorite (404)
+    description: User role is required to store new favorite
+    request:
+      method: POST
+      url: /favorites
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new favorite (405)
+    description: User role is required to store new favorite
+    request:
+      method: POST
+      url: /favorites
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new favorite (409)
+    description: User role is required to store new favorite
+    request:
+      method: POST
+      url: /favorites
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new favorite (422)
+    description: User role is required to store new favorite
+    request:
+      method: POST
+      url: /favorites
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific favorite (200 Successful operation)
+    description: User role is required to retrieve specific favorite
+    request:
+      method: GET
+      url: /favorites/:favoriteId
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "product_id": "1234",
+            "user_id": "1234",
+            "id": "1234"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific favorite (401)
+    description: User role is required to retrieve specific favorite
+    request:
+      method: GET
+      url: /favorites/:favoriteId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific favorite (404)
+    description: User role is required to retrieve specific favorite
+    request:
+      method: GET
+      url: /favorites/:favoriteId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific favorite (405)
+    description: User role is required to retrieve specific favorite
+    request:
+      method: GET
+      url: /favorites/:favoriteId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific favorite (204 Successful operation)
+    description: User role is required to delete a specific favorite
+    request:
+      method: DELETE
+      url: /favorites/:favoriteId
+    response:
+      status: 204
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific favorite (401)
+    description: User role is required to delete a specific favorite
+    request:
+      method: DELETE
+      url: /favorites/:favoriteId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific favorite (404)
+    description: User role is required to delete a specific favorite
+    request:
+      method: DELETE
+      url: /favorites/:favoriteId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific favorite (405)
+    description: User role is required to delete a specific favorite
+    request:
+      method: DELETE
+      url: /favorites/:favoriteId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific favorite (409)
+    description: User role is required to delete a specific favorite
+    request:
+      method: DELETE
+      url: /favorites/:favoriteId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific favorite (422)
+    description: User role is required to delete a specific favorite
+    request:
+      method: DELETE
+      url: /favorites/:favoriteId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all images (200 Successful operation)
+    description: Retrieve all images
+    request:
+      method: GET
+      url: /images
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "by_name": "commodo unde",
+              "by_url": "vaco",
+              "source_name": "curis utique advenio",
+              "source_url": "super cohors defleo",
+              "file_name": "sumptus",
+              "title": "vehemens via aequitas",
+              "id": "apud vindico thorax"
+            },
+            {
+              "by_name": "ager",
+              "by_url": "titulus rem",
+              "source_name": "vester decens",
+              "source_url": "tripudio qui",
+              "file_name": "vomito",
+              "title": "culpo",
+              "id": "cedo"
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all images (404)
+    description: Retrieve all images
+    request:
+      method: GET
+      url: /images
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all images (405)
+    description: Retrieve all images
+    request:
+      method: GET
+      url: /images
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all invoices (200 Successful operation)
+    description: "`admin` retrieves all invoices, `user` retrieves only related invoices"
+    request:
+      method: GET
+      url: /invoices
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "current_page": 1,
+            "data": [
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "user_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_date": "2022-10-20 09:49:45",
+                "invoice_number": "INV-2022000002",
+                "billing_street": "soluta annus",
+                "billing_city": "adhaero cruciamentum vinum",
+                "billing_country": "cras exercitationem",
+                "billing_state": "vis tempora caterva",
+                "billing_postal_code": "curia",
+                "additional_discount_percentage": 99.54,
+                "additional_discount_amount": 34.76,
+                "subtotal": 13.21,
+                "total": 6.89,
+                "status": "COMPLETED",
+                "status_message": "",
+                "invoicelines": [
+                  {
+                    "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "unit_price": 46.48,
+                    "discount_percentage": 63.23,
+                    "discounted_price": 9.71,
+                    "quantity": 14,
+                    "product": {
+                      "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                      "name": "new brand",
+                      "description": "Lorum ipsum",
+                      "price": 9.99,
+                      "is_location_offer": 1,
+                      "is_rental": 0,
+                      "in_stock": 0,
+                      "co2_rating": "A",
+                      "is_eco_friendly": true,
+                      "brand": {
+                        "id": "versus ancilla ventito",
+                        "name": "new brand",
+                        "slug": "new-brand"
+                      },
+                      "category": {
+                        "id": "solium expedita compono",
+                        "parent_id": "creo unus",
+                        "name": "new category",
+                        "slug": "new-category",
+                        "sub_categories": [
+                          null,
+                          null
+                        ]
+                      },
+                      "product_image": {
+                        "by_name": "succurro vesco",
+                        "by_url": "usus xiphias",
+                        "source_name": "amplexus",
+                        "source_url": "comis uter",
+                        "file_name": "tempore abscido sponte",
+                        "title": "depraedor peccatus",
+                        "id": "trans absens vapulus"
+                      }
+                    }
+                  },
+                  {
+                    "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "unit_price": 91.19,
+                    "discount_percentage": 9.82,
+                    "discounted_price": 5.76,
+                    "quantity": 28,
+                    "product": {
+                      "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                      "name": "new brand",
+                      "description": "Lorum ipsum",
+                      "price": 9.99,
+                      "is_location_offer": 1,
+                      "is_rental": 0,
+                      "in_stock": 0,
+                      "co2_rating": "A",
+                      "is_eco_friendly": true,
+                      "brand": {
+                        "id": "combibo",
+                        "name": "new brand",
+                        "slug": "new-brand"
+                      },
+                      "category": {
+                        "id": "deorsum curriculum",
+                        "parent_id": "velit callide",
+                        "name": "new category",
+                        "slug": "new-category",
+                        "sub_categories": [
+                          null,
+                          null
+                        ]
+                      },
+                      "product_image": {
+                        "by_name": "alioqui",
+                        "by_url": "caste cibo ulterius",
+                        "source_name": "animi",
+                        "source_url": "necessitatibus creo",
+                        "file_name": "adhuc",
+                        "title": "ipsa",
+                        "id": "tenus abundans administratio"
+                      }
+                    }
+                  }
+                ],
+                "created_at": "2022-08-01 08:24:56"
+              },
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "user_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_date": "2022-10-20 09:49:45",
+                "invoice_number": "INV-2022000002",
+                "billing_street": "voveo consequuntur",
+                "billing_city": "curso alter acies",
+                "billing_country": "pauper",
+                "billing_state": "aeneus auctus",
+                "billing_postal_code": "colo",
+                "additional_discount_percentage": 56.97,
+                "additional_discount_amount": 84.2,
+                "subtotal": 61.22,
+                "total": 15.41,
+                "status": "COMPLETED",
+                "status_message": "",
+                "invoicelines": [
+                  {
+                    "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "unit_price": 74.15,
+                    "discount_percentage": 28.09,
+                    "discounted_price": 12.09,
+                    "quantity": 82,
+                    "product": {
+                      "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                      "name": "new brand",
+                      "description": "Lorum ipsum",
+                      "price": 9.99,
+                      "is_location_offer": 1,
+                      "is_rental": 0,
+                      "in_stock": 0,
+                      "co2_rating": "A",
+                      "is_eco_friendly": true,
+                      "brand": {
+                        "id": "titulus aeger minus",
+                        "name": "new brand",
+                        "slug": "new-brand"
+                      },
+                      "category": {
+                        "id": "beatae",
+                        "parent_id": "confido decimus comis",
+                        "name": "new category",
+                        "slug": "new-category",
+                        "sub_categories": [
+                          null,
+                          null
+                        ]
+                      },
+                      "product_image": {
+                        "by_name": "corrigo strues torqueo",
+                        "by_url": "demo pectus vesper",
+                        "source_name": "sto argumentum cultura",
+                        "source_url": "vomer blanditiis laudantium",
+                        "file_name": "repudiandae",
+                        "title": "admitto convoco voco",
+                        "id": "inventore uterque"
+                      }
+                    }
+                  },
+                  {
+                    "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "unit_price": 62.77,
+                    "discount_percentage": 35.65,
+                    "discounted_price": 71.09,
+                    "quantity": 10,
+                    "product": {
+                      "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                      "name": "new brand",
+                      "description": "Lorum ipsum",
+                      "price": 9.99,
+                      "is_location_offer": 1,
+                      "is_rental": 0,
+                      "in_stock": 0,
+                      "co2_rating": "A",
+                      "is_eco_friendly": true,
+                      "brand": {
+                        "id": "voluptate ambulo",
+                        "name": "new brand",
+                        "slug": "new-brand"
+                      },
+                      "category": {
+                        "id": "texo valetudo spoliatio",
+                        "parent_id": "somniculosus subito",
+                        "name": "new category",
+                        "slug": "new-category",
+                        "sub_categories": [
+                          null,
+                          null
+                        ]
+                      },
+                      "product_image": {
+                        "by_name": "suspendo id venustas",
+                        "by_url": "ater admoveo",
+                        "source_name": "occaecati",
+                        "source_url": "acquiro",
+                        "file_name": "pecco",
+                        "title": "tener dolorem",
+                        "id": "utpote totam sumo"
+                      }
+                    }
+                  }
+                ],
+                "created_at": "2022-08-01 08:24:56"
+              }
+            ],
+            "from": 1,
+            "last_page": 1,
+            "per_page": 1,
+            "to": 1,
+            "total": 1
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all invoices (401)
+    description: "`admin` retrieves all invoices, `user` retrieves only related invoices"
+    request:
+      method: GET
+      url: /invoices
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all invoices (404)
+    description: "`admin` retrieves all invoices, `user` retrieves only related invoices"
+    request:
+      method: GET
+      url: /invoices
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all invoices (405)
+    description: "`admin` retrieves all invoices, `user` retrieves only related invoices"
+    request:
+      method: GET
+      url: /invoices
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new invoice (200 Successful operation)
+    description: Store new invoice
+    request:
+      method: POST
+      url: /invoices
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "user_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "invoice_date": "2022-10-20 09:49:45",
+            "invoice_number": "INV-2022000002",
+            "billing_street": "crux delibero",
+            "billing_city": "peior supra",
+            "billing_country": "velut harum taedium",
+            "billing_state": "vivo apostolus",
+            "billing_postal_code": "suscipio subiungo",
+            "additional_discount_percentage": 42.03,
+            "additional_discount_amount": 31.77,
+            "subtotal": 36.8,
+            "total": 42.06,
+            "status": "COMPLETED",
+            "status_message": "",
+            "invoicelines": [
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 85.7,
+                "discount_percentage": 73.66,
+                "discounted_price": 68.67,
+                "quantity": 70,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "ducimus calamitas aut",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "summa averto",
+                    "parent_id": "theatrum civitas magni",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "tertius agnitio",
+                    "by_url": "cupiditas amita",
+                    "source_name": "cogito umerus crur",
+                    "source_url": "creber",
+                    "file_name": "decor absum civitas",
+                    "title": "surgo ratione adinventitias",
+                    "id": "sum voveo"
+                  }
+                }
+              },
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 77.47,
+                "discount_percentage": 91.08,
+                "discounted_price": 26.9,
+                "quantity": 51,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "alius vel",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "sollicito ipsa abeo",
+                    "parent_id": "deduco ascisco",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "timor coniecto",
+                    "by_url": "confugo arto optio",
+                    "source_name": "comis",
+                    "source_url": "tollo",
+                    "file_name": "validus aeger",
+                    "title": "blandior terebro amaritudo",
+                    "id": "timidus cogo"
+                  }
+                }
+              }
+            ],
+            "created_at": "2022-08-01 08:24:56"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new invoice (401)
+    description: Store new invoice
+    request:
+      method: POST
+      url: /invoices
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new invoice (404)
+    description: Store new invoice
+    request:
+      method: POST
+      url: /invoices
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new invoice (405)
+    description: Store new invoice
+    request:
+      method: POST
+      url: /invoices
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new invoice (422)
+    description: Store new invoice
+    request:
+      method: POST
+      url: /invoices
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new guest invoice (200 Successful operation)
+    description: Store new invoice for guest checkout
+    request:
+      method: POST
+      url: /invoices/guest
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "user_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "invoice_date": "2022-10-20 09:49:45",
+            "invoice_number": "INV-2022000002",
+            "billing_street": "crinis",
+            "billing_city": "sumptus vinco quisquam",
+            "billing_country": "tardus tergiversatio delego",
+            "billing_state": "tres",
+            "billing_postal_code": "quidem",
+            "additional_discount_percentage": 47.15,
+            "additional_discount_amount": 40.13,
+            "subtotal": 69.48,
+            "total": 2.29,
+            "status": "COMPLETED",
+            "status_message": "",
+            "invoicelines": [
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 5.86,
+                "discount_percentage": 80.05,
+                "discounted_price": 96.49,
+                "quantity": 79,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "suscipio ab",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "bene copiose blanditiis",
+                    "parent_id": "convoco vilicus stabilis",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "casus",
+                    "by_url": "cohors amplexus",
+                    "source_name": "abbas claudeo",
+                    "source_url": "neque voluptatibus modi",
+                    "file_name": "ventosus correptius",
+                    "title": "supra via adulatio",
+                    "id": "cohibeo cedo admoveo"
+                  }
+                }
+              },
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 84.17,
+                "discount_percentage": 82.12,
+                "discounted_price": 81.61,
+                "quantity": 84,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "quaerat",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "voluptatibus coniuratio terminatio",
+                    "parent_id": "turpis",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "commodi tabernus fugit",
+                    "by_url": "cogo cariosus caelum",
+                    "source_name": "concido",
+                    "source_url": "turpis cauda",
+                    "file_name": "depromo comburo demoror",
+                    "title": "aranea adfero impedit",
+                    "id": "decet"
+                  }
+                }
+              }
+            ],
+            "created_at": "2022-08-01 08:24:56"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new guest invoice (422)
+    description: Store new invoice for guest checkout
+    request:
+      method: POST
+      url: /invoices/guest
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific invoice (200 Successful operation)
+    description: Retrieve specific invoice
+    request:
+      method: GET
+      url: /invoices/:invoiceId
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "user_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "invoice_date": "2022-10-20 09:49:45",
+            "invoice_number": "INV-2022000002",
+            "billing_street": "demonstro ipsam nesciunt",
+            "billing_city": "vos atrocitas vorago",
+            "billing_country": "suasoria dolores",
+            "billing_state": "theologus",
+            "billing_postal_code": "ustulo cibo",
+            "additional_discount_percentage": 28.33,
+            "additional_discount_amount": 61.2,
+            "subtotal": 28.43,
+            "total": 92.5,
+            "status": "COMPLETED",
+            "status_message": "",
+            "invoicelines": [
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 11.69,
+                "discount_percentage": 94.88,
+                "discounted_price": 5.26,
+                "quantity": 74,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "admitto tempora",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "defessus creator",
+                    "parent_id": "despecto absum conitor",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "suppono volo aperiam",
+                    "by_url": "vorago beneficium alveus",
+                    "source_name": "cattus custodia",
+                    "source_url": "perspiciatis quisquam",
+                    "file_name": "subito sequi",
+                    "title": "tabgo attonbitus",
+                    "id": "demo velum absorbeo"
+                  }
+                }
+              },
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 85.21,
+                "discount_percentage": 21.64,
+                "discounted_price": 49,
+                "quantity": 25,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "quaerat",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "rem",
+                    "parent_id": "studio succedo atavus",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "sustineo ager",
+                    "by_url": "spargo tolero voluptatibus",
+                    "source_name": "asper",
+                    "source_url": "calco",
+                    "file_name": "aut barba",
+                    "title": "comitatus coepi texo",
+                    "id": "corrumpo caste volo"
+                  }
+                }
+              }
+            ],
+            "created_at": "2022-08-01 08:24:56"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific invoice (401)
+    description: Retrieve specific invoice
+    request:
+      method: GET
+      url: /invoices/:invoiceId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific invoice (404)
+    description: Retrieve specific invoice
+    request:
+      method: GET
+      url: /invoices/:invoiceId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific invoice (405)
+    description: Retrieve specific invoice
+    request:
+      method: GET
+      url: /invoices/:invoiceId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific invoice (200)
+    description: Update specific invoice
+    request:
+      method: PUT
+      url: /invoices/:invoiceId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific invoice (401)
+    description: Update specific invoice
+    request:
+      method: PUT
+      url: /invoices/:invoiceId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific invoice (404)
+    description: Update specific invoice
+    request:
+      method: PUT
+      url: /invoices/:invoiceId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific invoice (405)
+    description: Update specific invoice
+    request:
+      method: PUT
+      url: /invoices/:invoiceId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific invoice (422)
+    description: Update specific invoice
+    request:
+      method: PUT
+      url: /invoices/:invoiceId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific invoice (200)
+    description: Partially update specific invoice
+    request:
+      method: PATCH
+      url: /invoices/:invoiceId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific invoice (401)
+    description: Partially update specific invoice
+    request:
+      method: PATCH
+      url: /invoices/:invoiceId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific invoice (404)
+    description: Partially update specific invoice
+    request:
+      method: PATCH
+      url: /invoices/:invoiceId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific invoice (405)
+    description: Partially update specific invoice
+    request:
+      method: PATCH
+      url: /invoices/:invoiceId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific invoice (422)
+    description: Partially update specific invoice
+    request:
+      method: PATCH
+      url: /invoices/:invoiceId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Download already generated PDF of a specific invoice (200 Successful operation)
+    description: Download already generated PDF of a specific invoice
+    request:
+      method: GET
+      url: /invoices/:invoice_number/download-pdf
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "user_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "invoice_date": "2022-10-20 09:49:45",
+            "invoice_number": "INV-2022000002",
+            "billing_street": "sum voluptas doloremque",
+            "billing_city": "aegrus tam accedo",
+            "billing_country": "bellicus socius tricesimus",
+            "billing_state": "strues tutamen iusto",
+            "billing_postal_code": "crudelis",
+            "additional_discount_percentage": 65.42,
+            "additional_discount_amount": 37.94,
+            "subtotal": 67.4,
+            "total": 92.06,
+            "status": "COMPLETED",
+            "status_message": "",
+            "invoicelines": [
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 33.43,
+                "discount_percentage": 99.26,
+                "discounted_price": 70.63,
+                "quantity": 29,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "sunt",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "ubi",
+                    "parent_id": "ter allatus repudiandae",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "quas aduro",
+                    "by_url": "sunt ratione",
+                    "source_name": "alter eligendi copiose",
+                    "source_url": "voveo hic benevolentia",
+                    "file_name": "ulterius benigne aqua",
+                    "title": "viscus aestus thymbra",
+                    "id": "confero venio tepesco"
+                  }
+                }
+              },
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 60.78,
+                "discount_percentage": 91.29,
+                "discounted_price": 76.21,
+                "quantity": 66,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "cruciamentum",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "vehemens rem",
+                    "parent_id": "adicio spiculum",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "thema",
+                    "by_url": "ascit",
+                    "source_name": "adsuesco conitor bis",
+                    "source_url": "canis vulpes",
+                    "file_name": "titulus",
+                    "title": "carbo",
+                    "id": "culpo"
+                  }
+                }
+              }
+            ],
+            "created_at": "2022-08-01 08:24:56"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Download already generated PDF of a specific invoice (401)
+    description: Download already generated PDF of a specific invoice
+    request:
+      method: GET
+      url: /invoices/:invoice_number/download-pdf
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Download already generated PDF of a specific invoice (404)
+    description: Download already generated PDF of a specific invoice
+    request:
+      method: GET
+      url: /invoices/:invoice_number/download-pdf
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Download already generated PDF of a specific invoice (405)
+    description: Download already generated PDF of a specific invoice
+    request:
+      method: GET
+      url: /invoices/:invoice_number/download-pdf
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve the status of the PDF. (200 Successful operation)
+    description: Retrieve the status of the PDF. The status can be INITIATED, IN_PROGRESS, COMPLETED
+    request:
+      method: GET
+      url: /invoices/:invoice_number/download-pdf-status
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "user_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "invoice_date": "2022-10-20 09:49:45",
+            "invoice_number": "INV-2022000002",
+            "billing_street": "conspergo",
+            "billing_city": "sustineo",
+            "billing_country": "curriculum",
+            "billing_state": "cornu",
+            "billing_postal_code": "deorsum",
+            "additional_discount_percentage": 45.57,
+            "additional_discount_amount": 33.52,
+            "subtotal": 76.94,
+            "total": 50.34,
+            "status": "COMPLETED",
+            "status_message": "",
+            "invoicelines": [
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 12.53,
+                "discount_percentage": 3.3,
+                "discounted_price": 51.83,
+                "quantity": 30,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "speculum viriliter",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "molestias abutor degero",
+                    "parent_id": "quia",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "accommodo",
+                    "by_url": "ipsum",
+                    "source_name": "ubi tendo",
+                    "source_url": "cado",
+                    "file_name": "alo laborum",
+                    "title": "cometes tui",
+                    "id": "admiratio amplitudo maiores"
+                  }
+                }
+              },
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "unit_price": 82.35,
+                "discount_percentage": 91.95,
+                "discounted_price": 54.43,
+                "quantity": 76,
+                "product": {
+                  "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                  "name": "new brand",
+                  "description": "Lorum ipsum",
+                  "price": 9.99,
+                  "is_location_offer": 1,
+                  "is_rental": 0,
+                  "in_stock": 0,
+                  "co2_rating": "A",
+                  "is_eco_friendly": true,
+                  "brand": {
+                    "id": "avaritia",
+                    "name": "new brand",
+                    "slug": "new-brand"
+                  },
+                  "category": {
+                    "id": "averto",
+                    "parent_id": "vinco adopto",
+                    "name": "new category",
+                    "slug": "new-category",
+                    "sub_categories": [
+                      null,
+                      null
+                    ]
+                  },
+                  "product_image": {
+                    "by_name": "tergiversatio aspicio vallum",
+                    "by_url": "umquam vox",
+                    "source_name": "ratione molestiae",
+                    "source_url": "taedium",
+                    "file_name": "iste",
+                    "title": "cometes aperte averto",
+                    "id": "stella infit somniculosus"
+                  }
+                }
+              }
+            ],
+            "created_at": "2022-08-01 08:24:56"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve the status of the PDF. (401)
+    description: Retrieve the status of the PDF. The status can be INITIATED, IN_PROGRESS, COMPLETED
+    request:
+      method: GET
+      url: /invoices/:invoice_number/download-pdf-status
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve the status of the PDF. (404)
+    description: Retrieve the status of the PDF. The status can be INITIATED, IN_PROGRESS, COMPLETED
+    request:
+      method: GET
+      url: /invoices/:invoice_number/download-pdf-status
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve the status of the PDF. (405)
+    description: Retrieve the status of the PDF. The status can be INITIATED, IN_PROGRESS, COMPLETED
+    request:
+      method: GET
+      url: /invoices/:invoice_number/download-pdf-status
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update invoice status (200)
+    description: Update invoice status
+    request:
+      method: PUT
+      url: /invoices/:invoiceId/status
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update invoice status (401)
+    description: Update invoice status
+    request:
+      method: PUT
+      url: /invoices/:invoiceId/status
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update invoice status (404)
+    description: Update invoice status
+    request:
+      method: PUT
+      url: /invoices/:invoiceId/status
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update invoice status (405)
+    description: Update invoice status
+    request:
+      method: PUT
+      url: /invoices/:invoiceId/status
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update invoice status (422)
+    description: Update invoice status
+    request:
+      method: PUT
+      url: /invoices/:invoiceId/status
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific invoices matching the search query (200 Successful operation)
+    description: Search is performed on the `invoice_number`, `billing_street` and `status` column
+    request:
+      method: GET
+      url: /invoices/search
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "current_page": 1,
+            "data": [
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "user_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_date": "2022-10-20 09:49:45",
+                "invoice_number": "INV-2022000002",
+                "billing_street": "avarus acies",
+                "billing_city": "tempora tenuis",
+                "billing_country": "curtus",
+                "billing_state": "curso eligendi incidunt",
+                "billing_postal_code": "absum",
+                "additional_discount_percentage": 56.95,
+                "additional_discount_amount": 5.62,
+                "subtotal": 92.06,
+                "total": 91.49,
+                "status": "COMPLETED",
+                "status_message": "",
+                "invoicelines": [
+                  {
+                    "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "unit_price": 26.91,
+                    "discount_percentage": 60.01,
+                    "discounted_price": 65.45,
+                    "quantity": 7,
+                    "product": {
+                      "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                      "name": "new brand",
+                      "description": "Lorum ipsum",
+                      "price": 9.99,
+                      "is_location_offer": 1,
+                      "is_rental": 0,
+                      "in_stock": 0,
+                      "co2_rating": "A",
+                      "is_eco_friendly": true,
+                      "brand": {
+                        "id": "illum",
+                        "name": "new brand",
+                        "slug": "new-brand"
+                      },
+                      "category": {
+                        "id": "suffragium vicissitudo articulus",
+                        "parent_id": "cado cervus",
+                        "name": "new category",
+                        "slug": "new-category",
+                        "sub_categories": [
+                          null,
+                          null
+                        ]
+                      },
+                      "product_image": {
+                        "by_name": "conduco auxilium",
+                        "by_url": "somniculosus libero amitto",
+                        "source_name": "eligendi ascit",
+                        "source_url": "urbs sodalitas",
+                        "file_name": "trado adeo",
+                        "title": "vallum spoliatio argentum",
+                        "id": "comburo volup demonstro"
+                      }
+                    }
+                  },
+                  {
+                    "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "unit_price": 19.78,
+                    "discount_percentage": 95.51,
+                    "discounted_price": 13.18,
+                    "quantity": 81,
+                    "product": {
+                      "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                      "name": "new brand",
+                      "description": "Lorum ipsum",
+                      "price": 9.99,
+                      "is_location_offer": 1,
+                      "is_rental": 0,
+                      "in_stock": 0,
+                      "co2_rating": "A",
+                      "is_eco_friendly": true,
+                      "brand": {
+                        "id": "tyrannus derideo aer",
+                        "name": "new brand",
+                        "slug": "new-brand"
+                      },
+                      "category": {
+                        "id": "tempora tyrannus",
+                        "parent_id": "claustrum ante absorbeo",
+                        "name": "new category",
+                        "slug": "new-category",
+                        "sub_categories": [
+                          null,
+                          null
+                        ]
+                      },
+                      "product_image": {
+                        "by_name": "auctus crapula",
+                        "by_url": "depraedor",
+                        "source_name": "summa",
+                        "source_url": "chirographum cur aeger",
+                        "file_name": "quia",
+                        "title": "itaque aequus",
+                        "id": "spes eum conicio"
+                      }
+                    }
+                  }
+                ],
+                "created_at": "2022-08-01 08:24:56"
+              },
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "user_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "invoice_date": "2022-10-20 09:49:45",
+                "invoice_number": "INV-2022000002",
+                "billing_street": "adeptio",
+                "billing_city": "cubo degero",
+                "billing_country": "vero consuasor",
+                "billing_state": "callide",
+                "billing_postal_code": "dolore est utrimque",
+                "additional_discount_percentage": 25.55,
+                "additional_discount_amount": 38.75,
+                "subtotal": 74.36,
+                "total": 97.62,
+                "status": "COMPLETED",
+                "status_message": "",
+                "invoicelines": [
+                  {
+                    "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "unit_price": 74.68,
+                    "discount_percentage": 40.23,
+                    "discounted_price": 75.27,
+                    "quantity": 25,
+                    "product": {
+                      "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                      "name": "new brand",
+                      "description": "Lorum ipsum",
+                      "price": 9.99,
+                      "is_location_offer": 1,
+                      "is_rental": 0,
+                      "in_stock": 0,
+                      "co2_rating": "A",
+                      "is_eco_friendly": true,
+                      "brand": {
+                        "id": "truculenter arbor",
+                        "name": "new brand",
+                        "slug": "new-brand"
+                      },
+                      "category": {
+                        "id": "ipsum eveniet",
+                        "parent_id": "templum",
+                        "name": "new category",
+                        "slug": "new-category",
+                        "sub_categories": [
+                          null,
+                          null
+                        ]
+                      },
+                      "product_image": {
+                        "by_name": "alii vitiosus",
+                        "by_url": "pauci",
+                        "source_name": "soleo alter corona",
+                        "source_url": "ancilla ancilla",
+                        "file_name": "quod",
+                        "title": "confido",
+                        "id": "thorax vinitor"
+                      }
+                    }
+                  },
+                  {
+                    "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "invoice_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "product_id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                    "unit_price": 21.01,
+                    "discount_percentage": 60.68,
+                    "discounted_price": 84.51,
+                    "quantity": 6,
+                    "product": {
+                      "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                      "name": "new brand",
+                      "description": "Lorum ipsum",
+                      "price": 9.99,
+                      "is_location_offer": 1,
+                      "is_rental": 0,
+                      "in_stock": 0,
+                      "co2_rating": "A",
+                      "is_eco_friendly": true,
+                      "brand": {
+                        "id": "sortitus tempus",
+                        "name": "new brand",
+                        "slug": "new-brand"
+                      },
+                      "category": {
+                        "id": "arbustum",
+                        "parent_id": "corrumpo",
+                        "name": "new category",
+                        "slug": "new-category",
+                        "sub_categories": [
+                          null,
+                          null
+                        ]
+                      },
+                      "product_image": {
+                        "by_name": "campana",
+                        "by_url": "ventito arceo",
+                        "source_name": "clamo ara thalassinus",
+                        "source_url": "vorago celer delibero",
+                        "file_name": "veritatis",
+                        "title": "tot",
+                        "id": "facilis vigilo"
+                      }
+                    }
+                  }
+                ],
+                "created_at": "2022-08-01 08:24:56"
+              }
+            ],
+            "from": 1,
+            "last_page": 1,
+            "per_page": 1,
+            "to": 1,
+            "total": 1
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific invoices matching the search query (401)
+    description: Search is performed on the `invoice_number`, `billing_street` and `status` column
+    request:
+      method: GET
+      url: /invoices/search
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific invoices matching the search query (404)
+    description: Search is performed on the `invoice_number`, `billing_street` and `status` column
+    request:
+      method: GET
+      url: /invoices/search
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific invoices matching the search query (405)
+    description: Search is performed on the `invoice_number`, `billing_street` and `status` column
+    request:
+      method: GET
+      url: /invoices/search
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Check payment
+    description: Check payment
+    request:
+      method: POST
+      url: /payment/check
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "message": "Success status"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Lookup address details by postcode (200 Address details)
+    description: "Returns street, city and state for a given country/postcode/house number. The underlying source is configurable: a local faker driver (default) or an external HTTP service (e.g. a WireMock stub) when POSTCODE_LOOKUP_DRIVER=http."
+    request:
+      method: GET
+      url: /postcode-lookup
+    response:
+      status: 200
+      statusText: Address details
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "street": "cibo possimus calculus",
+            "house_number": "clarus",
+            "city": "comprehendo caveo",
+            "state": "alter",
+            "country": "harum",
+            "postcode": "vicissitudo"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Lookup address details by postcode (422)
+    description: "Returns street, city and state for a given country/postcode/house number. The underlying source is configurable: a local faker driver (default) or an external HTTP service (e.g. a WireMock stub) when POSTCODE_LOOKUP_DRIVER=http."
+    request:
+      method: GET
+      url: /postcode-lookup
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Lookup address details by postcode (502 Upstream lookup failure)
+    description: "Returns street, city and state for a given country/postcode/house number. The underlying source is configurable: a local faker driver (default) or an external HTTP service (e.g. a WireMock stub) when POSTCODE_LOOKUP_DRIVER=http."
+    request:
+      method: GET
+      url: /postcode-lookup
+    response:
+      status: 502
+      statusText: Upstream lookup failure
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all products (200 Successful operation)
+    description: Retrieve all products
+    request:
+      method: GET
+      url: /products
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "current_page": 1,
+            "data": [
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "name": "new brand",
+                "description": "Lorum ipsum",
+                "price": 9.99,
+                "is_location_offer": 1,
+                "is_rental": 0,
+                "in_stock": 0,
+                "co2_rating": "A",
+                "is_eco_friendly": true,
+                "brand": {
+                  "id": "ullus conduco causa",
+                  "name": "new brand",
+                  "slug": "new-brand"
+                },
+                "category": {
+                  "id": "accendo calculus coerceo",
+                  "parent_id": "deleniti thesis tergo",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                },
+                "product_image": {
+                  "by_name": "cilicium",
+                  "by_url": "comptus tunc",
+                  "source_name": "ait supplanto",
+                  "source_url": "stabilis viridis subiungo",
+                  "file_name": "vindico voluptatibus",
+                  "title": "crur avaritia defendo",
+                  "id": "vomer subvenio"
+                }
+              },
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "name": "new brand",
+                "description": "Lorum ipsum",
+                "price": 9.99,
+                "is_location_offer": 1,
+                "is_rental": 0,
+                "in_stock": 0,
+                "co2_rating": "A",
+                "is_eco_friendly": true,
+                "brand": {
+                  "id": "crinis",
+                  "name": "new brand",
+                  "slug": "new-brand"
+                },
+                "category": {
+                  "id": "facere",
+                  "parent_id": "valeo",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                },
+                "product_image": {
+                  "by_name": "succedo",
+                  "by_url": "ater aequitas acidus",
+                  "source_name": "cito",
+                  "source_url": "adflicto crur",
+                  "file_name": "tabella adamo",
+                  "title": "aspernatur tondeo",
+                  "id": "validus"
+                }
+              }
+            ],
+            "from": 1,
+            "last_page": 1,
+            "per_page": 1,
+            "to": 1,
+            "total": 1
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all products (404)
+    description: Retrieve all products
+    request:
+      method: GET
+      url: /products
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all products (405)
+    description: Retrieve all products
+    request:
+      method: GET
+      url: /products
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new product (200 Successful operation)
+    description: Store new product
+    request:
+      method: POST
+      url: /products
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "name": "new brand",
+            "description": "Lorum ipsum",
+            "price": 9.99,
+            "is_location_offer": 1,
+            "is_rental": 0,
+            "in_stock": 0,
+            "co2_rating": "A",
+            "is_eco_friendly": true,
+            "brand": {
+              "id": "deputo voluptatem",
+              "name": "new brand",
+              "slug": "new-brand"
+            },
+            "category": {
+              "id": "defaeco callide",
+              "parent_id": "animus aut",
+              "name": "new category",
+              "slug": "new-category",
+              "sub_categories": [
+                null,
+                null
+              ]
+            },
+            "product_image": {
+              "by_name": "supra",
+              "by_url": "unde demum cuppedia",
+              "source_name": "tepidus succedo comparo",
+              "source_url": "argentum suspendo ademptio",
+              "file_name": "tactus utrum cubicularis",
+              "title": "stella consuasor alo",
+              "id": "suppono"
+            }
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new product (404)
+    description: Store new product
+    request:
+      method: POST
+      url: /products
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new product (405)
+    description: Store new product
+    request:
+      method: POST
+      url: /products
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new product (422)
+    description: Store new product
+    request:
+      method: POST
+      url: /products
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific product (200 Successful operation)
+    description: Retrieve specific product
+    request:
+      method: GET
+      url: /products/:productId
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+            "name": "new brand",
+            "description": "Lorum ipsum",
+            "price": 9.99,
+            "is_location_offer": 1,
+            "is_rental": 0,
+            "in_stock": 0,
+            "co2_rating": "A",
+            "is_eco_friendly": true,
+            "brand": {
+              "id": "virga",
+              "name": "new brand",
+              "slug": "new-brand"
+            },
+            "category": {
+              "id": "pectus infit",
+              "parent_id": "bestia asperiores coadunatio",
+              "name": "new category",
+              "slug": "new-category",
+              "sub_categories": [
+                null,
+                null
+              ]
+            },
+            "product_image": {
+              "by_name": "subito rerum",
+              "by_url": "adsum copiose",
+              "source_name": "creator",
+              "source_url": "carus cunctatio tero",
+              "file_name": "cito depono tactus",
+              "title": "ventus",
+              "id": "accusator accusator"
+            }
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific product (404)
+    description: Retrieve specific product
+    request:
+      method: GET
+      url: /products/:productId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific product (405)
+    description: Retrieve specific product
+    request:
+      method: GET
+      url: /products/:productId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific product (200)
+    description: Update specific product
+    request:
+      method: PUT
+      url: /products/:productId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific product (404)
+    description: Update specific product
+    request:
+      method: PUT
+      url: /products/:productId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific product (405)
+    description: Update specific product
+    request:
+      method: PUT
+      url: /products/:productId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific product (422)
+    description: Update specific product
+    request:
+      method: PUT
+      url: /products/:productId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific product (200)
+    description: Partially update specific product
+    request:
+      method: PATCH
+      url: /products/:productId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific product (404)
+    description: Partially update specific product
+    request:
+      method: PATCH
+      url: /products/:productId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific product (405)
+    description: Partially update specific product
+    request:
+      method: PATCH
+      url: /products/:productId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific product (422)
+    description: Partially update specific product
+    request:
+      method: PATCH
+      url: /products/:productId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific product (204 Successful operation)
+    description: Admin role is required to delete a specific product
+    request:
+      method: DELETE
+      url: /products/:productId
+    response:
+      status: 204
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific product (401)
+    description: Admin role is required to delete a specific product
+    request:
+      method: DELETE
+      url: /products/:productId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific product (404)
+    description: Admin role is required to delete a specific product
+    request:
+      method: DELETE
+      url: /products/:productId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific product (405)
+    description: Admin role is required to delete a specific product
+    request:
+      method: DELETE
+      url: /products/:productId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific product (409)
+    description: Admin role is required to delete a specific product
+    request:
+      method: DELETE
+      url: /products/:productId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific product (422)
+    description: Admin role is required to delete a specific product
+    request:
+      method: DELETE
+      url: /products/:productId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve related products (200 Successful operation)
+    description: Retrieve related products
+    request:
+      method: GET
+      url: /products/:productId/related
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+              "name": "new brand",
+              "description": "Lorum ipsum",
+              "price": 9.99,
+              "is_location_offer": 1,
+              "is_rental": 0,
+              "in_stock": 0,
+              "co2_rating": "A",
+              "is_eco_friendly": true,
+              "brand": {
+                "id": "natus",
+                "name": "new brand",
+                "slug": "new-brand"
+              },
+              "category": {
+                "id": "degenero pax",
+                "parent_id": "unde sunt abundans",
+                "name": "new category",
+                "slug": "new-category",
+                "sub_categories": [
+                  null,
+                  null
+                ]
+              },
+              "product_image": {
+                "by_name": "utilis vester succurro",
+                "by_url": "vallum",
+                "source_name": "illo in",
+                "source_url": "vinco",
+                "file_name": "ubi saepe",
+                "title": "thymum creptio",
+                "id": "ademptio adflicto crustulum"
+              }
+            },
+            {
+              "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+              "name": "new brand",
+              "description": "Lorum ipsum",
+              "price": 9.99,
+              "is_location_offer": 1,
+              "is_rental": 0,
+              "in_stock": 0,
+              "co2_rating": "A",
+              "is_eco_friendly": true,
+              "brand": {
+                "id": "censura",
+                "name": "new brand",
+                "slug": "new-brand"
+              },
+              "category": {
+                "id": "ante solum",
+                "parent_id": "thema expedita talus",
+                "name": "new category",
+                "slug": "new-category",
+                "sub_categories": [
+                  null,
+                  null
+                ]
+              },
+              "product_image": {
+                "by_name": "valeo demoror bis",
+                "by_url": "desidero",
+                "source_name": "supra",
+                "source_url": "aliqua dedecor spero",
+                "file_name": "talio praesentium libero",
+                "title": "tondeo tristis",
+                "id": "tenetur crinis optio"
+              }
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve related products (404)
+    description: Retrieve related products
+    request:
+      method: GET
+      url: /products/:productId/related
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve related products (405)
+    description: Retrieve related products
+    request:
+      method: GET
+      url: /products/:productId/related
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific products matching the search query (200 Successful operation)
+    description: Search is performed on the `name` column
+    request:
+      method: GET
+      url: /products/search
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "current_page": 1,
+            "data": [
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "name": "new brand",
+                "description": "Lorum ipsum",
+                "price": 9.99,
+                "is_location_offer": 1,
+                "is_rental": 0,
+                "in_stock": 0,
+                "co2_rating": "A",
+                "is_eco_friendly": true,
+                "brand": {
+                  "id": "tamisium utrimque conturbo",
+                  "name": "new brand",
+                  "slug": "new-brand"
+                },
+                "category": {
+                  "id": "advenio utroque",
+                  "parent_id": "votum conculco",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                },
+                "product_image": {
+                  "by_name": "acceptus cursim sordeo",
+                  "by_url": "claustrum",
+                  "source_name": "adimpleo decerno",
+                  "source_url": "uter caecus",
+                  "file_name": "apto arx impedit",
+                  "title": "contabesco aetas",
+                  "id": "considero"
+                }
+              },
+              {
+                "id": "01JFG8Q5XKZJY4BEYQ87PC2Q1Y",
+                "name": "new brand",
+                "description": "Lorum ipsum",
+                "price": 9.99,
+                "is_location_offer": 1,
+                "is_rental": 0,
+                "in_stock": 0,
+                "co2_rating": "A",
+                "is_eco_friendly": true,
+                "brand": {
+                  "id": "velut",
+                  "name": "new brand",
+                  "slug": "new-brand"
+                },
+                "category": {
+                  "id": "adopto",
+                  "parent_id": "attero clibanus",
+                  "name": "new category",
+                  "slug": "new-category",
+                  "sub_categories": [
+                    null,
+                    null
+                  ]
+                },
+                "product_image": {
+                  "by_name": "accusator",
+                  "by_url": "ut",
+                  "source_name": "advenio commodi",
+                  "source_url": "enim cavus",
+                  "file_name": "vulnero bis quia",
+                  "title": "a delibero",
+                  "id": "deleniti xiphias"
+                }
+              }
+            ],
+            "from": 1,
+            "last_page": 1,
+            "per_page": 1,
+            "to": 1,
+            "total": 1
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific products matching the search query (404)
+    description: Search is performed on the `name` column
+    request:
+      method: GET
+      url: /products/search
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific products matching the search query (405)
+    description: Search is performed on the `name` column
+    request:
+      method: GET
+      url: /products/search
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specs for a product
+    request:
+      method: GET
+      url: /products/:productId/specs
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "id": "dolor fugit",
+              "product_id": "theatrum aequus",
+              "spec_name": "beatus tolero amplus",
+              "spec_value": "accusamus decumbo advenio",
+              "spec_unit": "vulgo vesper"
+            },
+            {
+              "id": "saepe velum",
+              "product_id": "et",
+              "spec_name": "amiculum defaeco",
+              "spec_value": "arguo tutis vis",
+              "spec_unit": "tonsor"
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Add a spec to a product (201 Spec created)
+    request:
+      method: POST
+      url: /products/:productId/specs
+    response:
+      status: 201
+      statusText: Spec created
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "damno sono admoveo",
+            "product_id": "tener degero certus",
+            "spec_name": "coniuratio decretum",
+            "spec_value": "tempore vetus alo",
+            "spec_unit": "argentum depereo possimus"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Add a spec to a product (401)
+    request:
+      method: POST
+      url: /products/:productId/specs
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Add a spec to a product (422)
+    request:
+      method: POST
+      url: /products/:productId/specs
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve a specific spec
+    request:
+      method: GET
+      url: /products/:productId/specs/:specId
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "id": "abstergo officiis aliquam",
+            "product_id": "volup argentum",
+            "spec_name": "vinitor",
+            "spec_value": "abbas",
+            "spec_unit": "clam"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update a spec (200)
+    request:
+      method: PUT
+      url: /products/:productId/specs/:specId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update a spec (401)
+    request:
+      method: PUT
+      url: /products/:productId/specs/:specId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete a spec (204 Successful operation)
+    request:
+      method: DELETE
+      url: /products/:productId/specs/:specId
+    response:
+      status: 204
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete a spec (401)
+    request:
+      method: DELETE
+      url: /products/:productId/specs/:specId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all distinct spec names with their values
+    request:
+      method: GET
+      url: /product-specs/names
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get total sales per country (200 Successful operation)
+    description: "`Admin` role is required to get total sales per country"
+    request:
+      method: GET
+      url: /reports/total-sales-per-country
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "billing_country": "The Netherlands",
+              "total_sales": "1234"
+            },
+            {
+              "billing_country": "The Netherlands",
+              "total_sales": "1234"
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get total sales per country (401)
+    description: "`Admin` role is required to get total sales per country"
+    request:
+      method: GET
+      url: /reports/total-sales-per-country
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get total sales per country (404)
+    description: "`Admin` role is required to get total sales per country"
+    request:
+      method: GET
+      url: /reports/total-sales-per-country
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get top 10 purchased products (200 Successful operation)
+    description: "`Admin` role is required to get top 10 purchased products"
+    request:
+      method: GET
+      url: /reports/top10-purchased-products
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "name": "item",
+              "count": 2
+            },
+            {
+              "name": "item",
+              "count": 2
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get top 10 purchased products (401)
+    description: "`Admin` role is required to get top 10 purchased products"
+    request:
+      method: GET
+      url: /reports/top10-purchased-products
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get top 10 purchased products (404)
+    description: "`Admin` role is required to get top 10 purchased products"
+    request:
+      method: GET
+      url: /reports/top10-purchased-products
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get top 10 best selling categories (200 Successful operation)
+    description: "`Admin` role is required to get top 10 best selling categories"
+    request:
+      method: GET
+      url: /reports/top10-best-selling-categories
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "category_name": "item",
+              "total_earned": "1234"
+            },
+            {
+              "category_name": "item",
+              "total_earned": "1234"
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get top 10 best selling categories (401)
+    description: "`Admin` role is required to get top 10 best selling categories"
+    request:
+      method: GET
+      url: /reports/top10-best-selling-categories
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get top 10 best selling categories (404)
+    description: "`Admin` role is required to get top 10 best selling categories"
+    request:
+      method: GET
+      url: /reports/top10-best-selling-categories
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get total sales of years (200 Successful operation)
+    description: "`Admin` role is required to get total sales of years"
+    request:
+      method: GET
+      url: /reports/total-sales-of-years
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "year": 2022,
+              "total": 2
+            },
+            {
+              "year": 2022,
+              "total": 2
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get total sales of years (401)
+    description: "`Admin` role is required to get total sales of years"
+    request:
+      method: GET
+      url: /reports/total-sales-of-years
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get total sales of years (404)
+    description: "`Admin` role is required to get total sales of years"
+    request:
+      method: GET
+      url: /reports/total-sales-of-years
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get average sales per month (200 Successful operation)
+    description: "`Admin` role is required to get average sales per month"
+    request:
+      method: GET
+      url: /reports/average-sales-per-month
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "month": 1,
+              "average": 2,
+              "amount": 9.99
+            },
+            {
+              "month": 1,
+              "average": 2,
+              "amount": 9.99
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get average sales per month (401)
+    description: "`Admin` role is required to get average sales per month"
+    request:
+      method: GET
+      url: /reports/average-sales-per-month
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get average sales per month (404)
+    description: "`Admin` role is required to get average sales per month"
+    request:
+      method: GET
+      url: /reports/average-sales-per-month
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get average sales per week (200 Successful operation)
+    description: "`Admin` role is required to get average sales per week"
+    request:
+      method: GET
+      url: /reports/average-sales-per-week
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "week": 1,
+              "average": 2,
+              "amount": 9.99
+            },
+            {
+              "week": 1,
+              "average": 2,
+              "amount": 9.99
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get average sales per week (401)
+    description: "`Admin` role is required to get average sales per week"
+    request:
+      method: GET
+      url: /reports/average-sales-per-week
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get average sales per week (404)
+    description: "`Admin` role is required to get average sales per week"
+    request:
+      method: GET
+      url: /reports/average-sales-per-week
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get customers by country (200 Successful operation)
+    description: "`Admin` role is required to get customers by country"
+    request:
+      method: GET
+      url: /reports/customers-by-country
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "amount": 1,
+              "country": "The Netherlands"
+            },
+            {
+              "amount": 1,
+              "country": "The Netherlands"
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get customers by country (401)
+    description: "`Admin` role is required to get customers by country"
+    request:
+      method: GET
+      url: /reports/customers-by-country
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Get customers by country (404)
+    description: "`Admin` role is required to get customers by country"
+    request:
+      method: GET
+      url: /reports/customers-by-country
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Live sales feed over Server-Sent Events (SSE)
+    description: |-
+      Streams a finite run of simulated purchases built from real in-stock
+           *          products, using the `text/event-stream` protocol. Named events are emitted in
+           *          order: one `open`, then `sale` events (with an occasional `heartbeat`), then a
+           *          final `end`. Each `sale` carries an incrementing SSE `id`, so a reconnecting
+           *          client can send `Last-Event-ID` to resume numbering. Provide `seed` for a
+           *          deterministic, repeatable sequence.
+           *          The feed is modelled to feel alive: sales are **popularity-weighted** (cheaper,
+           *          consumable items sell far more often than expensive ones), arrive in **bursts and
+           *          lulls** rather than at a fixed rate, and are **stock-aware** - each sale draws down
+           *          a per-stream stock counter (`remaining_stock`), quantities are capped to what is
+           *          left, a product is retired once it hits zero (`sold_out: true`), and if everything
+           *          sells out a `sold-out` event is emitted and the stream ends early.
+           *          Note: Swagger UI and most API clients do not render SSE incrementally - they
+           *          buffer the whole response and only show it once the stream closes, so the call
+           *          appears to hang for its full duration. Consume it with an `EventSource` (browser)
+           *          to see events live, or keep `limit`/`interval` small for quick manual tests.
+    request:
+      method: GET
+      url: /sales-stream
+    response:
+      status: 200
+      statusText: An SSE stream.
+      headers:
+        - name: Content-Type
+          value: text/plain
+      body:
+        type: text
+        data: aranea apostolus
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Setup TOTP for the authenticated user (200 TOTP setup successful)
+    description: Generates a TOTP secret and QR code URL for the user to scan and enables TOTP setup.
+    request:
+      method: POST
+      url: /totp/setup
+    response:
+      status: 200
+      statusText: TOTP setup successful
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "secret": "vilitas quis surculus",
+            "qrCodeUrl": "arbustum"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Setup TOTP for the authenticated user (400 TOTP already enabled or another error)
+    description: Generates a TOTP secret and QR code URL for the user to scan and enables TOTP setup.
+    request:
+      method: POST
+      url: /totp/setup
+    response:
+      status: 400
+      statusText: TOTP already enabled or another error
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "error": "ultra"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Verify TOTP code for the authenticated user (200 TOTP verified successfully)
+    description: Validates the submitted TOTP code and enables TOTP if verification is successful.
+    request:
+      method: POST
+      url: /totp/verify
+    response:
+      status: 200
+      statusText: TOTP verified successfully
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "message": "TOTP enabled successfully"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Verify TOTP code for the authenticated user (400 Invalid TOTP code or another error)
+    description: Validates the submitted TOTP code and enables TOTP if verification is successful.
+    request:
+      method: POST
+      url: /totp/verify
+    response:
+      status: 400
+      statusText: Invalid TOTP code or another error
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "error": "Invalid TOTP"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all users (200 Successful operation)
+    description: Retrieve all users
+    request:
+      method: GET
+      url: /users
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "current_page": 1,
+            "data": [
+              {
+                "first_name": "John",
+                "last_name": "Doe",
+                "address": {
+                  "street": "Street 1",
+                  "house_number": "12",
+                  "city": "City",
+                  "state": "State",
+                  "country": "Country",
+                  "postal_code": "1234AA"
+                },
+                "phone": "0987654321",
+                "dob": "1970-01-01",
+                "email": "john@doe.example",
+                "id": "theca",
+                "provider": "capio summopere denique",
+                "totp_enabled": false,
+                "enabled": false,
+                "failed_login_attempts": 42,
+                "created_at": "2022-08-01 08:24:56"
+              },
+              {
+                "first_name": "John",
+                "last_name": "Doe",
+                "address": {
+                  "street": "Street 1",
+                  "house_number": "12",
+                  "city": "City",
+                  "state": "State",
+                  "country": "Country",
+                  "postal_code": "1234AA"
+                },
+                "phone": "0987654321",
+                "dob": "1970-01-01",
+                "email": "john@doe.example",
+                "id": "vulgo comitatus",
+                "provider": "tempus vestigium",
+                "totp_enabled": true,
+                "enabled": false,
+                "failed_login_attempts": 81,
+                "created_at": "2022-08-01 08:24:56"
+              }
+            ],
+            "from": 1,
+            "last_page": 1,
+            "per_page": 1,
+            "to": 1,
+            "total": 1
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all users (400 Bad Request)
+    description: Retrieve all users
+    request:
+      method: GET
+      url: /users
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve all users (401)
+    description: Retrieve all users
+    request:
+      method: GET
+      url: /users
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new user (201 Successful operation)
+    description: Store new user
+    request:
+      method: POST
+      url: /users/register
+    response:
+      status: 201
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "first_name": "John",
+            "last_name": "Doe",
+            "address": {
+              "street": "Street 1",
+              "house_number": "12",
+              "city": "City",
+              "state": "State",
+              "country": "Country",
+              "postal_code": "1234AA"
+            },
+            "phone": "0987654321",
+            "dob": "1970-01-01",
+            "email": "john@doe.example",
+            "id": "arma",
+            "provider": "pecus",
+            "totp_enabled": false,
+            "enabled": false,
+            "failed_login_attempts": 73,
+            "created_at": "2022-08-01 08:24:56"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new user (400 Bad Request)
+    description: Store new user
+    request:
+      method: POST
+      url: /users/register
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new user (401)
+    description: Store new user
+    request:
+      method: POST
+      url: /users/register
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new user (403 Forbidden)
+    description: Store new user
+    request:
+      method: POST
+      url: /users/register
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Store new user (409)
+    description: Store new user
+    request:
+      method: POST
+      url: /users/register
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Login customer
+    request:
+      method: POST
+      url: /users/login
+    response:
+      status: 200
+      statusText: A token
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "access_token": "super-secret-token",
+            "token_type": "Bearer",
+            "expires_in": 120
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Request a new password (200)
+    description: Request a new password, it actually sets the password to `welcome02`
+    request:
+      method: POST
+      url: /users/forgot-password
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Request a new password (400 Bad Request)
+    description: Request a new password, it actually sets the password to `welcome02`
+    request:
+      method: POST
+      url: /users/forgot-password
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Request a new password (401)
+    description: Request a new password, it actually sets the password to `welcome02`
+    request:
+      method: POST
+      url: /users/forgot-password
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Request a new password (403 Forbidden)
+    description: Request a new password, it actually sets the password to `welcome02`
+    request:
+      method: POST
+      url: /users/forgot-password
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Change password (200)
+    description: Change the existing password to a new one
+    request:
+      method: POST
+      url: /users/change-password
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Change password (401)
+    description: Change the existing password to a new one
+    request:
+      method: POST
+      url: /users/change-password
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve current customer info (200 A customer)
+    request:
+      method: GET
+      url: /users/me
+    response:
+      status: 200
+      statusText: A customer
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "first_name": "John",
+            "last_name": "Doe",
+            "address": {
+              "street": "Street 1",
+              "house_number": "12",
+              "city": "City",
+              "state": "State",
+              "country": "Country",
+              "postal_code": "1234AA"
+            },
+            "phone": "0987654321",
+            "dob": "1970-01-01",
+            "email": "john@doe.example",
+            "id": "cotidie subvenio aeger",
+            "provider": "ventito facilis",
+            "totp_enabled": true,
+            "enabled": true,
+            "failed_login_attempts": 99,
+            "created_at": "2022-08-01 08:24:56"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve current customer info (401)
+    request:
+      method: GET
+      url: /users/me
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Logout - invalidate the token (200 Result of logout)
+    description: Logout - invalidate the token
+    request:
+      method: GET
+      url: /users/logout
+    response:
+      status: 200
+      statusText: Result of logout
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "message": "Successfully logged out"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Logout - invalidate the token (400 Bad Request)
+    description: Logout - invalidate the token
+    request:
+      method: GET
+      url: /users/logout
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Logout - invalidate the token (401)
+    description: Logout - invalidate the token
+    request:
+      method: GET
+      url: /users/logout
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve a refreshed token (200 A token)
+    description: Retrieve a refreshed token
+    request:
+      method: GET
+      url: /users/refresh
+    response:
+      status: 200
+      statusText: A token
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "access_token": "super-secret-token",
+            "token_type": "Bearer",
+            "expires_in": 120
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve a refreshed token (400 Bad Request)
+    description: Retrieve a refreshed token
+    request:
+      method: GET
+      url: /users/refresh
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve a refreshed token (401)
+    description: Retrieve a refreshed token
+    request:
+      method: GET
+      url: /users/refresh
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific user (200 Successful operation)
+    description: Retrieve specific user
+    request:
+      method: GET
+      url: /users/:userId
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+            "first_name": "John",
+            "last_name": "Doe",
+            "address": {
+              "street": "Street 1",
+              "house_number": "12",
+              "city": "City",
+              "state": "State",
+              "country": "Country",
+              "postal_code": "1234AA"
+            },
+            "phone": "0987654321",
+            "dob": "1970-01-01",
+            "email": "john@doe.example",
+            "id": "curvo",
+            "provider": "aspicio deprecator coaegresco",
+            "totp_enabled": false,
+            "enabled": false,
+            "failed_login_attempts": 40,
+            "created_at": "2022-08-01 08:24:56"
+          }
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific user (401)
+    description: Retrieve specific user
+    request:
+      method: GET
+      url: /users/:userId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific user (404)
+    description: Retrieve specific user
+    request:
+      method: GET
+      url: /users/:userId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific user (405)
+    description: Retrieve specific user
+    request:
+      method: GET
+      url: /users/:userId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific user (200)
+    description: Update specific user
+    request:
+      method: PUT
+      url: /users/:userId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific user (401)
+    description: Update specific user
+    request:
+      method: PUT
+      url: /users/:userId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific user (403 Forbidden)
+    description: Update specific user
+    request:
+      method: PUT
+      url: /users/:userId
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific user (405)
+    description: Update specific user
+    request:
+      method: PUT
+      url: /users/:userId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific user (409)
+    description: Update specific user
+    request:
+      method: PUT
+      url: /users/:userId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Update specific user (422)
+    description: Update specific user
+    request:
+      method: PUT
+      url: /users/:userId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific user (200)
+    description: Partially update specific user
+    request:
+      method: PATCH
+      url: /users/:userId
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific user (401)
+    description: Partially update specific user
+    request:
+      method: PATCH
+      url: /users/:userId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific user (403 Forbidden)
+    description: Partially update specific user
+    request:
+      method: PATCH
+      url: /users/:userId
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific user (405)
+    description: Partially update specific user
+    request:
+      method: PATCH
+      url: /users/:userId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific user (409)
+    description: Partially update specific user
+    request:
+      method: PATCH
+      url: /users/:userId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Partially update specific user (422)
+    description: Partially update specific user
+    request:
+      method: PATCH
+      url: /users/:userId
+    response:
+      status: 422
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific user (204 Successful operation)
+    description: Admin role is required to delete a specific user
+    request:
+      method: DELETE
+      url: /users/:userId
+    response:
+      status: 204
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific user (401)
+    description: Admin role is required to delete a specific user
+    request:
+      method: DELETE
+      url: /users/:userId
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific user (403 Forbidden)
+    description: Admin role is required to delete a specific user
+    request:
+      method: DELETE
+      url: /users/:userId
+    response:
+      status: 403
+      statusText: Forbidden
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific user (404)
+    description: Admin role is required to delete a specific user
+    request:
+      method: DELETE
+      url: /users/:userId
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific user (405)
+    description: Admin role is required to delete a specific user
+    request:
+      method: DELETE
+      url: /users/:userId
+    response:
+      status: 405
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Delete specific user (409)
+    description: Admin role is required to delete a specific user
+    request:
+      method: DELETE
+      url: /users/:userId
+    response:
+      status: 409
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific users matching the search query (200 Successful operation)
+    description: Search is performed on the `first_name`, `last_name`, or `city` column
+    request:
+      method: GET
+      url: /users/search
+    response:
+      status: 200
+      statusText: Successful operation
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          [
+            {
+              "first_name": "John",
+              "last_name": "Doe",
+              "address": {
+                "street": "Street 1",
+                "house_number": "12",
+                "city": "City",
+                "state": "State",
+                "country": "Country",
+                "postal_code": "1234AA"
+              },
+              "phone": "0987654321",
+              "dob": "1970-01-01",
+              "email": "john@doe.example",
+              "id": "damnatio",
+              "provider": "solitudo deporto desino",
+              "totp_enabled": false,
+              "enabled": true,
+              "failed_login_attempts": 77,
+              "created_at": "2022-08-01 08:24:56"
+            },
+            {
+              "first_name": "John",
+              "last_name": "Doe",
+              "address": {
+                "street": "Street 1",
+                "house_number": "12",
+                "city": "City",
+                "state": "State",
+                "country": "Country",
+                "postal_code": "1234AA"
+              },
+              "phone": "0987654321",
+              "dob": "1970-01-01",
+              "email": "john@doe.example",
+              "id": "crinis decumbo",
+              "provider": "adnuo",
+              "totp_enabled": false,
+              "enabled": false,
+              "failed_login_attempts": 53,
+              "created_at": "2022-08-01 08:24:56"
+            }
+          ]
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific users matching the search query (401)
+    description: Search is performed on the `first_name`, `last_name`, or `city` column
+    request:
+      method: GET
+      url: /users/search
+    response:
+      status: 401
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
+  - name: Retrieve specific users matching the search query (404)
+    description: Search is performed on the `first_name`, `last_name`, or `city` column
+    request:
+      method: GET
+      url: /users/search
+    response:
+      status: 404
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: "{}"
+    copiedFrom:
+      requestPath: openapi-spec
