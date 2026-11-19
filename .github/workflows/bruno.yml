@@ -26,7 +26,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install
+          npm install express js-yaml
           npm install -g @usebruno/cli
 
       - name: Verify Mock File
