@@ -36,8 +36,8 @@ jobs:
 
       - name: Start Bruno YAML Mock Server
         run: |
-          node scripts/start-mock-server.js > mock.log 2>&1 &
-          sleep 10
+          nohup node scripts/start-mock-server.js > mock.log 2>&1 </dev/null &
+          sleep 5
 
       - name: Verify Mock Server
         run: |
